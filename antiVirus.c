@@ -21,7 +21,6 @@ FILE* checkedFile = NULL;
 
 
 
-
 void printHex(FILE* buffer, int length)
 {
     char* readText = calloc(length,sizeof(char));
@@ -138,7 +137,7 @@ void loadSig()
 
     list_free(vl);
     fgets(input,100,stdin);
-    sscanf(input,"%99[^\n]",fileName);
+    sscanf(input,"%s99[^\n]",fileName);
 
 
     file = fopen(fileName,"r+");
